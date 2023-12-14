@@ -1,3 +1,8 @@
+:root {
+    --button-color: rgba(3, 68, 222, 1);
+    --button-hover: rgba(0, 54, 179, 1);
+}
+
 html,
 body {
     margin: 0;
@@ -21,12 +26,11 @@ body {
     justify-content: center;
     gap: 20px;
 }
-
 .translate-container {
     display: flex;
     gap: 20px;
+    position: relative;
 }
-
 .input-section,
 .output-section {
     width: 550px;
@@ -64,6 +68,34 @@ select {
     opacity: 0.4;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 50px;
+}
+
+.translate-button {
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-size: 22px;
+    color: rgba(255, 255, 255, 1);
+    background-color: var(--button-color);
+}
+.translate-button:hover {
+    cursor: pointer;
+    background-color: var(--button-hover);
+}
+.icon {
+    width: 40px;
+    height: auto;
+}
+.change-icon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 20%;
+    right: 535px;
+    background-color: var(--button-color);
+    border-radius: 10px;
 }
 
