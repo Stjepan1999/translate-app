@@ -7,4 +7,9 @@ function createEventListeners() {
 }
 
 
-export { createEventListeners }
+function showTranslation(translatedText) {
+    const textarea = document.getElementById('translation-area');
+    textarea.textContent = translatedText
+}
+
+export { createEventListeners, showTranslation }
