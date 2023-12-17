@@ -13,8 +13,8 @@
                 <select id="from-lang">
                     <option value="en">English</option>
                     <option value="it">Italian</option>
-                    <option value="de-DE">German</option>
-                    <option value="fr-FR">French</option>
+                    <option value="de">German</option>
+                    <option value="fr">French</option>
                 </select>
                 <textarea id="text-to-translate" placeholder="Enter text">Hello there</textarea>
             </div>
@@ -23,19 +23,19 @@
                 <select id="to-lang">
                     <option value="it">Italian</option>
                     <option value="en">English</option>
-                    <option value="de-DE">German</option>
-                    <option value="fr-FR">French</option>
+                    <option value="de">German</option>
+                    <option value="fr">French</option>
                 </select>
                 <textarea id="translation-area" placeholder="Translation" readonly></textarea>
             </div>
         </div>
 
         <div class="interaction-section">
-            <img src="./icons/speaker-icon.png" class="icon">
-            <img src="./icons/copy-icon.png" class="icon">
+            <img src="./icons/speaker-icon.png" class="icon" id="speaker-source-text">
+            <img src="./icons/copy-icon.png" class="icon" id="copy-source-text">
             <button class="translate-button">TRANSLATE</button>
-            <img src="./icons/speaker-icon.png" class="icon">
-            <img src="./icons/copy-icon.png" class="icon">
+            <img src="./icons/speaker-icon.png" class="icon" id="speaker-translation">
+            <img src="./icons/copy-icon.png" class="icon" id="copy-translation">
         </div>
     </div>
     <script src="./main.js"></script>
