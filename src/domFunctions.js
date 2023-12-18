@@ -16,12 +16,15 @@ function createEventListeners() {
 
     const speakTranslationButton = document.getElementById('speak-translation');
     speakTranslationButton.addEventListener('click', speakTranslation)
+
+    const changeButton = document.querySelector('.change-icon');
+    changeButton.addEventListener('click', changeLanguages)
 }
 
 
 function showTranslation(translatedText) {
     const textarea = document.getElementById('translation-area');
-    textarea.textContent = translatedText
+    textarea.value = translatedText;
 }
 
 function copySourceText() {
@@ -48,6 +51,25 @@ function speakTranslation() {
     const textToSpeak = document.getElementById('translation-area').value;
     const utterance = new SpeechSynthesisUtterance(textToSpeak);
     window.speechSynthesis.speak(utterance);
+}
+
+function changeLanguages() {
+    // Change source and translation text
+    const sourceText = document.getElementById('text-to-translate').value;
+    const translationText = document.getElementById('translation-area').value;
+
+    if (!sourceText || !translationText) {
+        return
+    }
+
+    document.getElementById('text-to-translate').value = translationText;
+    document.getElementById('translation-area').value = sourceText;
+
+    // Change languages in dropdown menu
+    const fromLangIndex = document.getElementById('from-lang').selectedIndex;
+    const toLangIndex = document.getElementById('to-lang').selectedIndex;
+    document.getElementById('from-lang').selectedIndex = toLangIndex;
+    document.getElementById('to-lang').selectedIndex = fromLangIndex;
 }
 
 export { createEventListeners, showTranslation }
