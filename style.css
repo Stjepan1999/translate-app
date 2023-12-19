@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root {
-    --button-color: rgba(3, 68, 222, 1);
-    --button-hover: rgba(0, 54, 179, 1);
+    --button-color: rgb(32, 91, 231);
+    --button-hover: rgb(0, 63, 212);
 }
 
 html,
@@ -50,13 +52,15 @@ textarea {
     resize: none;
     border-radius: 10px;
     padding: 10px;
-    font-size: 16px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
 }
 select {
     width: 150px;
     height: 25px;
     border-radius: 5px;
     font-size: 16px;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     outline: none;
     background: none;
@@ -79,6 +83,8 @@ select {
     border-radius: 10px;
     border: none;
     font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+
     color: rgba(255, 255, 255, 1);
     background-color: var(--button-color);
 }
